@@ -1,0 +1,780 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: "Google Sans Flex", sans-serif; 
+}
+
+
+/*header styling */
+header {
+    background-color: rgb(241, 230, 196);
+    height: 4em;
+    padding: 0 2.5em;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+
+nav > a { 
+    text-decoration: none;
+    color: black; 
+    font-weight: 700;
+    font-size: 1.4em;
+    font-family: "Google Sans Flex", sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    text-transform: uppercase;
+    flex-direction: row;
+}
+
+.logo {
+    height: 2.5em;
+    vertical-align: middle;
+    margin-right: 0.3rem;
+    margin-left: 0;
+}
+
+/*navigation*/
+header nav .nav-link {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+}
+
+header nav .nav-link li {
+    position: relative;
+    z-index: 1000;
+    margin: 0;
+    padding-bottom: 0.3rem ; 
+    padding-top: 0.3rem;
+}
+
+header nav .nav-link li a {
+    white-space: nowrap;
+    display: block;
+    padding: 0; 
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.05em;
+    text-align: center;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+header nav .nav-link li > a:hover {
+    color: black;
+    transform: none;
+}
+
+/*Drop down menu */
+header nav .drop-down {
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    left: auto;
+    transform: none;
+    min-width: 11.25em;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    list-style-type: none;
+    padding: 0.3rem 0;
+    margin-top: 0; 
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+header nav .drop-down li {
+    display: block;
+    margin: 0;
+}
+header nav .drop-down li a {
+    padding: 0.625em 1.125em;
+    font-size: 0.95em;
+    color: #333;
+    text-align: left;
+    font-weight: 500;
+    position: relative; 
+    transition: color 0.3s ease;
+}
+
+header nav .drop-down li a:hover {
+    background-color: #f7f7f7;
+    color: black;
+}
+
+header nav .nav-link li:hover > .drop-down {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s; 
+}
+
+/*focus effect*/
+header nav .nav-link li a:focus {
+    outline: 2px solid black; 
+    outline-offset: 2px;
+    border-radius: 3px;
+    color: black;
+}
+
+/* Dropdown Link Focus */
+header nav .drop-down li a:focus {
+    background-color: #f7f7f7;
+    color: black;
+    outline: 2px solid black; 
+    outline-offset: 2px;
+}
+
+header nav .nav-link li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -0.25rem;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #5B774C;
+    transition: width 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+header nav .nav-link li a:hover::after {
+    width: 100%; 
+}
+
+header nav .nav-link li > a:hover {
+    color: black;
+}
+
+/*hamburger icons styling*/
+.hamburger i{
+    color:white;
+    display:none;
+    font-size:1.5rem;
+}
+
+.nav-right-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Skip link for accessibility */
+.skip-link{
+    position:absolute;
+    left:-9999px;
+    width:1px;
+    height:1px;
+}
+.skip-link:focus{
+    left:16px;top:16px;
+    padding:8px 10px;
+    background:#fff;
+    border:2px solid #0ea5e9;
+    border-radius:8px;
+}
+
+/*hero section*/
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+}
+
+/*text styling*/
+.hero-content h1 {
+    font-size: 3em;
+    color: rgb(255, 255, 255); 
+    font-weight: 800;
+    font-family: "DM Serif Display", serif;
+    font-style: normal;
+}
+
+.hero-content h2 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 1.875rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+/*video player*/
+.video{
+    background-color:#f7f7f7;
+    padding:20px;
+}
+.video-player {
+    width: 100%;
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Heading */
+.video-player h2 {
+    font-size: 2rem;
+    color:  #4B6E32;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: "DM Serif Display", serif;
+}
+
+/* Intro paragraph */
+.video-player p {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+    line-height: 1.6;
+}
+
+/* Video itself */
+.video-player video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto;
+}
+/*transcript*/
+.transcript-details {
+    margin: 20px auto; 
+    max-width: 900px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+}
+
+.transcript-details summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #4B6E32;
+}
+
+.transcript-content {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/*CTA button styling */
+.cta-button {
+    display: inline-block;
+    padding: 0.75em 1.875em;
+    background-color: #5B774C;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 1.25em;
+    transition: background-color 0.3s ease;
+    min-width: 44px;
+    min-height: 44px;
+    margin: 8px;
+}
+
+/*hover effect*/
+.cta-button:hover {
+    background-color: #2e523f;
+}
+
+.cta-button i {
+    margin-right: 0.5em;
+}
+
+/*focus effect*/
+.cta-button:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+    background-color: #2e523f;
+}
+
+/*get involve section*/
+.get-involved-section {
+    text-align: center;
+    padding: 7.5rem 1.25rem;
+}
+
+.get-involved-section h2{
+    font-family: "DM Serif Display", serif;
+    font-size:2em;
+    font-weight: 700;
+    color: #4B6E32;
+}
+.get-involved-section h3{
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 1.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+/*action styling*/
+.action-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 1.875rem;
+    margin: 2.5em auto;
+    max-width: 56rem;
+}
+
+.highlight-item {
+    flex-basis: 30%;
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+    transition: transform 0.3s;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-item i {
+    font-size: 2.5rem;
+    color: #CF6A05;
+    margin-bottom: 0.625rem;
+}
+
+.highlight-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.highlight-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/*news section */
+.news-section {
+    padding: 5rem 0;
+    background-color: #daefcf;
+}
+
+.news-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.news-content {
+    flex: 1;
+    padding-right: 1.25rem;
+}
+
+.news-content h2 {
+    font-size: 2rem;
+    color: #4B6E32;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    font-weight: 700;
+    font-family: "DM Serif Display", serif;
+}
+.news-content h3{
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 1.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.news-visual {
+    flex: 1;
+}
+
+.news-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.625rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*get in touch styling*/
+.getintouch-section {
+    padding: 5rem 0;
+    background-color: #f7f7f7;
+}
+
+.getintouch-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.getintouch-text {
+    flex: 1;
+    padding-right: 1.25rem;
+}
+
+.getintouch-text h2 {
+    font-size: 2rem;
+    color: #4B6E32;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    font-weight: 700;
+    font-family: "DM Serif Display", serif;
+}
+.getintouch-text h3{
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 1.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.getintouch-image {
+    flex: 1;
+}
+
+.getintouch-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.635rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*F&Q section*/
+.faq-section {
+    padding: 3.75rem 1.25rem;
+    text-align: center;
+    border-top: 1px solid #ddd; 
+    background-color: #ffffff; 
+}
+
+.faq-section h2, 
+.faq-section h3 {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    color: #4B6E32;
+    margin-bottom: 0.625rem;
+    font-weight: 700;
+    font-family: "DM Serif Display", serif;
+}
+
+.faq-section h3 {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 1.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+/*back to top button*/
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: none;
+    border: none;
+    background: #5B774C;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15px;
+    opacity: .85;
+    transition: background-color .3s ease, opacity .3s ease;
+    z-index: 99;
+    font-size: 20px;
+    line-height: 0;
+}
+
+#backToTopBtn:hover {
+    background: #2E523F;
+    opacity: 1;
+}
+
+/*footer*/
+footer {
+    margin-top: auto;
+    background: #fff;
+    padding: 1.875rem 1.25rem;
+    color: rgb(68, 68, 68);
+    border-top: 1px solid rgb(231, 228, 228);
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5625rem;
+    gap: 1.25rem;
+}
+.footer-links a {
+    color: #2E523F;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.3125rem 0.625rem;
+    transition: color .3s;
+}
+.footer-links a:hover {
+    color: #5B774C;
+    text-decoration: underline;
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin: 0.625rem auto;
+    padding: 0.625rem 0;
+}
+.footer-social a {
+    color: #2E523F;
+    font-size: 1.1875rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    border: 1px solid #2E523F;
+}
+.footer-social a:hover {
+    background: #2E523F;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+    border-color: #2E523F;
+}
+.footer-copyright {
+    text-align: center;
+    margin-top: 0.625rem;
+    padding-top: 0.625rem;
+    border-top: 1px solid rgb(231, 228, 228);
+    font-size: 0.8125rem;
+    line-height: 1.4;
+}
+.footer-copyright strong {
+    font-weight: 600;
+    color: #000;
+}
+
+/*media queries for mobile (≤767px)*/
+@media only screen and (max-width: 767px) {
+header nav .nav-link {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100vh;
+    background-color: rgb(144, 162, 131);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 7.5rem;
+    padding-left: 2.5rem;
+    gap: 1.8rem;
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1500;
+}
+
+/* Slide-in state */
+header nav .nav-link.active {
+    transform: translateX(0);
+}
+
+/* Mobile menu links */
+header nav .nav-link li {
+    width: 100%;
+    margin: 0;
+}
+
+header nav .nav-link li a {
+    font-size: 1.3rem;
+    color: #222;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Hide desktop dropdown in mobile */
+header nav .drop-down {
+    display: none !important;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.hamburger i {
+    display: block;
+    font-size: 2rem;
+    color: black;
+}
+
+/*hero-section*/
+.hero-section h1{
+    font-size:2em;
+}
+.hero-section h2{
+    font-size:1.5em;
+}
+
+/*get involved section*/
+.action-highlights {
+    flex-direction: column;
+    gap: 0.9rem;
+}
+.highlight-item {
+    flex-basis: 100%;
+}
+
+/*news section*/
+.news-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+}
+    
+.news-content {
+    text-align: center;
+    padding: 0 1.25rem; 
+}
+    
+.news-visual {
+    max-width: 100%;
+}
+.news-visual img {
+    transform: none; 
+    box-shadow: none;
+}
+
+/*getintouch section*/
+.getintouch-container {
+    flex-direction: column;
+    text-align: center;
+}
+    
+.getintouch-text {
+    padding-right: 0;
+    margin-bottom: 1.875rem;
+
+}
+
+}
+
+/*media queries for tablet (768px–1023px)*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+header nav .nav-link {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: rgb(144, 162, 131);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 7.5rem;
+    padding-left: 2.5rem;
+    gap: 1.875rem;
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1500;
+}
+
+/* Slide-in state */
+header nav .nav-link.active {
+    transform: translateX(0);
+}
+
+/* Mobile menu links */
+header nav .nav-link li {
+    width: 100%;
+    margin: 0;
+}
+
+header nav .nav-link li a {
+    font-size: 1.3rem;
+    color: #222;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Hide desktop dropdown in mobile */
+header nav .drop-down {
+    display: none !important;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.hamburger i {
+    display: block;
+    font-size: 2rem;
+    color: black;
+}
+
+
+}

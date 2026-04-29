@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Food For All</title>
+    <!--css file-->
+    <link rel="stylesheet" href="css/home.css">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--google text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Serif+Display:ital@0;1&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<!--navigation-->
+<header>
+    <nav>
+        <a href="home.html"><img class="logo" src="images/logo.png" alt="Food For All logo with a shield and a hand receving apple">Food For All</a> 
+        <div class="nav-right-container">
+            <ul class="nav-link" id="nav-link"> 
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="involved.html">Get Involved</a>
+                    <ul class="drop-down">
+                        <li><a href="ways-to-help.html">Ways to help</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News/Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"> <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+<main id="main-content">
+<section class="hero-section" id="hero-section">
+    <img src="images/hero.png" alt="Students setting up food bank table">
+    <div class="hero-content">
+        <h1>Food, Support, and Focus For Your Future.</h1>
+        <h2>We provide essential meals confidentially, helping students concentrate on their education, not their next meal.</h2>
+        <a href="about.html" class="cta-button">Learn More
+        </a>
+    </div>
+</section>
+<section class="video">
+    <div class="video-player">
+        <h2>Why Our Work Matters</h2>
+        <p>Discover how Food For All supports students facing food insecurity through real stories and meaningful action. Watch our short video to learn more about our mission and impact.</p>
+        <video id="groupVideo"
+            preload="metadata"
+            controls
+            poster="images/poster.png">
+            <source src="video/VeniseCheung_FoodInsecurity_FinalCut_Dec1.mp4" type="video/mp4">
+        </video>
+        <details class="transcript-details">
+            <summary>View or Download Video Transcript</summary>
+            <div class="transcript-content">
+                <p>
+                    A text version of the video dialogue is available as a PDF for download: 
+                <a href="video/Transcript.pdf">Download Transcript (PDF)</a>
+            </p>
+            </div>
+        </details>
+    </div>
+</section>
+<section class="get-involved-section" id="get-involved">
+    <h2>Ready to Help?</h2>
+    <h3>Choose the way you want to help the Food For All make a difference in our community.</h3>
+    <div class="action-highlights">
+        <div class="highlight-item">
+            <i class="fas fa-hand-holding-dollar"></i> <h4>Donate Funds</h4>
+            <p>Support us with a one-time or monthly gift.</p>
+        </div>
+        <div class="highlight-item">
+            <i class="fas fa-box-open"></i> <h4>Donate Food</h4>
+            <p>Contribute our Top 5 Most Needed Items.</p>
+        </div>
+        <div class="highlight-item">
+            <i class="fas fa-people-group"></i> <h4>Volunteer Time</h4>
+            <p>Join our team for sorting and distribution.</p>
+        </div>
+    </div>
+    <a href="involved.html" class="cta-button primary-green">Get Involved Now</a>
+</section>
+<section class="news-section" id="news-section">
+    <div class="news-container">
+        <div class="news-visual">
+            <img src="images/events.png" alt="Students discussing a project or event planning for the food bank initiative.">
+        </div>
+        <div class="news-content">
+            <h2>News & Events</h2>
+            <h3>Stay current with all the ways we're active on campus. Find available volunteer shifts, check out upcoming events, and view our promotional posters.</h3>
+            <a href="news.html" class="cta-button primary-green">
+                View Shifts & events
+            </a>
+        </div>
+    </div>
+</section>
+<section class="getintouch-section" id="getintouch">
+    <div class="getintouch-container">
+        <div class="getintouch-text"> 
+            <h2>Get In Touch Now</h2>
+            <h3>Need assistance, have a large donation to arrange, or simply want to learn more? Our team is here to help.</h3>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </div>
+        <div class="getintouch-image">
+            <img src="images/contact.png" alt="A closeup of Food For All poster at bulletin board">
+        </div>
+        
+    </div>
+</section>
+<section class="faq-section" id="faq-section">
+    <h2>Quick Answers</h2>
+    <h3>Have questions about eligibility, donating, or operating hours? Find immediate answers to our frequently asked questions on our dedicated FAQ page.</h3>
+    <a href="FAQ.html" class="cta-button">View All FAQ</a> 
+</section>
+</main>
+<!--Back to Top button-->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+        <i class="fa-solid fa-up-long"></i>
+    </button>
+<footer>
+   <div class="footer-links">
+     <a href="home.html">Home</a>
+     <a href="about.html" aria-current="page">About Us</a>
+     <a href="involved.html">Get Involved</a>
+     <a href="news.html">News/Events</a>
+     <a href="contact.html">Contact</a>
+     <a href="FAQ.html">FAQ</a>
+   </div>
+
+    <div class="footer-social">
+        <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:foodbank@centennialcollege.ca"><i class="fa-solid fa-envelope" ></i> </a>
+
+    </div>
+
+    <div class="footer-copyright">
+        <p>
+           Copyright © 2025 Centennial College Food Bank. All Rights Reserved.| 
+            <strong> Location:</strong> Story Arts Centre, 951 Carlaw Ave, Toronto, ON M4K 3M2
+        </p>
+    </div>
+</footer>
+<script src="javascript/homepage.js"> </script>
+</body>
+</html>

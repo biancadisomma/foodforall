@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Food For All</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/contact.css">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--google text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Serif+Display:ital@0;1&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<!--navigation-->
+<header>
+    <nav>
+        <a href="home.html"><img class="logo" src="images/logo.png" alt="Food For All logo with a shield and a hand receving apple">Food For All</a> 
+        <div class="nav-right-container">
+            <ul class="nav-link" id="nav-link"> 
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="involved.html">Get Involved</a>
+                    <ul class="drop-down">
+                        <li><a href="ways-to-help.html">Ways to help</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News/Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"> <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+<main id="main-content">
+<div class="text-section">
+    <h1>Welcome to Join Us</h1>
+        <h2>Making a difference in the fight against student food insecurity.</h2>
+        <p>Thank you for your interest in Food For All! We are always looking for passionate students and community members to partner with us in our mission.</p>
+</div>
+
+    <form action ="Thankyou.html" method="get" id ="form">
+    <label for="fullname">Full name:</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Full Name" >
+    <span id="errors" class="error-message"></span>
+
+    <label for="email"> Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Email" >
+    <span id="email_errors" class="error-message"></span>
+
+    <label for="number"> Student Number:</label>
+    <input type="tel" id="number" name="number" placeholder="Student-number">
+    <span id="number_errors" class="error-message"></span>
+
+    <label for="subject">Subject:</label> 
+    <select id="subject" name="subject">
+        <option value="" disabled selected>Select a subject...</option>
+        <option value="Help_Out">Want to help out?</option>
+        <option value="Help">Need help?</option>
+        <option value="billing_question">Billing Question</option>
+        <option value="Question">Other question?</option>
+    </select>
+    <span id="subject_errors" class="error-message"></span>
+
+    <div id="other-question-container" style="display:none;">
+    <label for="other_detail">Specify your Question:</label> 
+    <input type="text" id="other_detail" name="other_detail" placeholder="Please specify...">
+    <span id="other_errors" class="error-message"></span>
+    </div>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Your message" rows="5" ></textarea>
+    <span id="message_errors" class="error-message"></span>
+    
+    <input type="submit">
+</form>
+
+</main>
+
+<!--Back to Top button-->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+        <i class="fa-solid fa-up-long"></i>
+    </button>
+<footer>
+    <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="about.html" aria-current="page">About Us</a>
+        <a href="involved.html">Get Involved</a>
+        <a href="news.html">News/Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="FAQ.html">FAQ</a>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:foodbank@centennialcollege.ca"><i class="fa-solid fa-envelope" ></i> </a>
+
+    </div>
+
+    <div class="footer-copyright">
+        <p>
+           Copyright © 2025 Centennial College Food Bank. All Rights Reserved.| 
+            <strong> Location:</strong> Story Arts Centre, 951 Carlaw Ave, Toronto, ON M4K 3M2
+        </p>
+    </div>
+</footer>
+
+<!--javascript-->
+<script src="javascript/contact.js"> </script>
+</body>
+</html>
